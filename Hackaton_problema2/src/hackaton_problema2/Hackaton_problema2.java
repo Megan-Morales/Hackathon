@@ -21,26 +21,14 @@ public class Hackaton_problema2 {
         System.out.println("Ingrese una cadena");    //imprimo mensaje para desplegar
         Scanner cadena = new Scanner(System.in);     //recibo el texto de entrada
         String entrada = (cadena.nextLine());
-        char[] cadenaEntrada =  entrada.toCharArray();  //lo convierto en array
+        String cadenaLower = entrada.toLowerCase();
+        char[] cadenaEntrada =  cadenaLower.toCharArray();  //lo convierto en array
         int contadorVocales = 0;
         
         
-        
-        for(int i= 0; i < entrada.length(); i++ ){ // recorro el array de chars y lo comparo 
+        for(int i= 0; i < cadenaLower.length(); i++ ){ // recorro el array de chars y lo comparo 
             
-            if(cadenaEntrada[i] == 'a' ||cadenaEntrada[i] == 'A'  ){
-                contadorVocales++;
-            }
-            else if(cadenaEntrada[i] == 'e' ||cadenaEntrada[i] == 'E' ){
-                contadorVocales++;
-            }
-            else if(cadenaEntrada[i] == 'i' ||cadenaEntrada[i] == 'I' ){
-                contadorVocales++;
-            }
-            else if(cadenaEntrada[i] == 'o' ||cadenaEntrada[i] == 'O' ){
-                contadorVocales++;
-            }
-            else if(cadenaEntrada[i] == 'u' ||cadenaEntrada[i] == 'U' ){
+            if(cadenaEntrada[i] == 'a' ||cadenaEntrada[i] == 'e'||cadenaEntrada[i] == 'i'||cadenaEntrada[i] == 'o' ||cadenaEntrada[i] == 'u'){
                 contadorVocales++;
             }
         }
